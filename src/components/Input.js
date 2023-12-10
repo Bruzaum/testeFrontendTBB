@@ -1,6 +1,9 @@
-function Input() {
+function Input({ handleCategoryChange, categoryName}) {
   return (
-    <div>Input</div>
+    <label className="sidebar-label-container">
+      <input onChange={handleCategoryChange} type="radio"/>
+      <span className="checkmark"></span>{categoryName}
+    </label>
   )
 }
 

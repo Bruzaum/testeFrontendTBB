@@ -1,6 +1,5 @@
 nav {
     display: flex;
-    border-bottom: 2px solid #f3f3f3;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
@@ -14,6 +13,7 @@ input {
     background: #f7f6f6;
     outline: none;
     margin-right: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     position: relative;
     width: 25rem;
@@ -21,13 +21,16 @@ input {
 
 .nav-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    width: 40rem;
+    border-bottom: 2px solid #f3f3f3;
 }
 
 .nav-icons {
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 10px;
+    margin-bottom: 20px;
     color: #494949;
 }

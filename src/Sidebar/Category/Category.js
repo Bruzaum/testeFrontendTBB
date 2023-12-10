@@ -1,8 +1,19 @@
 import "./Category.css"
 
-function Category() {
+function Category({handleCategoryChange, resultCategoriesList}) {
   return (
-    <div>Category</div>
+    <div>
+      <h2 className="sidebar-title">Filtros</h2>
+
+      <div>
+        <label className="sidebar-label-container" >
+          <input onChange={handleCategoryChange} type="radio" />
+        </label>
+
+        { resultCategoriesList }
+        
+      </div>
+    </div>
   )
 }
 
