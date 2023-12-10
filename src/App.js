@@ -1,7 +1,12 @@
+import Navigation from "./Navigation/Nav";
+import Products from "./Products/Products";
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Navigation />
+      <Products />
+    </>
   );
 }
 
