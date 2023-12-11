@@ -69,3 +69,9 @@
   margin-top: 3rem;
   border-color: #f7f7f7;
 }
+
+@media (max-width: 768px) {
+  .sidebar-label-container input {
+    max-width: 0;
+  }
+}

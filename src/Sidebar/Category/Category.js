@@ -4,10 +4,10 @@ import Input from "../../components/Input";
 function Category({ handleCategoryChange }) {
 
   return (
-    <div>
+    <div className="sidebar-categories-container">
       <h2 className="sidebar-title">Filtros</h2>
 
-      <div>
+      <div className="sidebar-categories">
         <label className="sidebar-label-container">
           <input onChange={handleCategoryChange} type="radio" value="" name="test" />
           <span className="checkmark"></span>Todas

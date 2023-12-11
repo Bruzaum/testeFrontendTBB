@@ -6,11 +6,13 @@ function Sidebar({handleCategoryChange}) {
 
   return (
     <section className="sidebar">
+      <div>
         <div className="logo-container">
             <img src={RexonaLogo} alt="Rexona logo" />
         </div>
 
         <Category handleCategoryChange={handleCategoryChange}/>
+      </div>
     </section>
   )
 }

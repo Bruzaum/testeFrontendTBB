@@ -15,6 +15,10 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
     border: none;
     padding: 0 20px 20px 20px;
@@ -37,4 +41,40 @@
     margin-bottom: 1rem;
     max-width: 80%;
     color: #140141;
+}
+
+@media (max-width: 1024px) {
+    .products-container p{
+        margin-left: 14rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container p{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-container {
+        margin-left: 0rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .card {
+        width: 25%;
+    }
+
+    .card-img {
+        max-width: 175px;
+        max-height: 175px;
+    }
+
+    .card-title {
+        font-size: 1em;
+        max-width: 100%;
+        margin: 0;
+    }
 }
