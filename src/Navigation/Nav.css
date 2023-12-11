@@ -5,6 +5,7 @@ nav {
     padding: 20px;
     z-index: 999;
     margin-left: 2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
 }
 
 input {
@@ -19,12 +20,32 @@ input {
     width: 25rem;
 }
 
+.nav-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-header h1 {
+    font-family: 'Gilroy-Heavy', sans-serif;
+    font-size: 2.5rem;
+}
+
+.nav-header-blue {
+    color: #140141;
+}
+
+.nav-header-purple {
+    color: #AC0CE7;
+}
+
 .nav-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40rem;
-    border-bottom: 2px solid #f3f3f3;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .nav-icons {
@@ -33,4 +54,17 @@ input {
     margin-left: 10px;
     margin-bottom: 20px;
     color: #494949;
+}
+
+.search-input{
+    background-color: #ffffff;
+    border-bottom: 1px solid #AC0CE7;
+    border-radius: 0;
+    font-size: 1.3rem;
+}
+
+::placeholder {
+    color: #AC0CE7;
+    font-size: 1.3rem;
+    font-family: 'Gilroy-Bold', sans-serif;
 }

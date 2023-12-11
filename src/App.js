@@ -8,8 +8,6 @@ import productsDataBase from "./data/products.json"
 
 function App() {
 
-  // productsDataBase.data.nodes.forEach((product) => console.log(product.name))
-
   // Input Filter Begin
   const [query, setQuery] = useState("")
 
@@ -18,8 +16,7 @@ function App() {
   }
 
   const filteredItems = productsDataBase.data.nodes.filter(product => 
-    product.name.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)   
-  );
+    product.name.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !== -1 );
   // Input Filter End
 
   // Category Filter
@@ -52,14 +49,31 @@ function App() {
     ))
   }
 
+  function numberOfProducts(products, selected, query) {
+    let filteredProducts = products
+
+    // Filtering Input Items
+    if (query) {
+      filteredProducts = filteredItems
+    }
+
+    // Selected Category Filter
+    if(selected) {
+      filteredProducts = filteredProducts.filter(product => product.category.name === selected )
+    }
+
+    return filteredProducts.length
+  }
+
   const result = filteredData(productsDataBase.data.nodes, selectedCategory, query)
+  const number = numberOfProducts(productsDataBase.data.nodes, selectedCategory, query)
 
 
   return (
     <>
       <Sidebar handleCategoryChange={handleCategoryChange} />
       <Navigation query={query} handleInputChange={handleInputChange} />
-      <Products result={result}/>
+      <Products result={result} number={number}/>
     </>
   );
 }
